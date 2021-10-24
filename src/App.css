@@ -1,0 +1,32 @@
+.App{
+    width: 800px;
+    margin: 0 auto;
+}
+.Nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Error{
+    text-align: center;
+    padding: .5em;
+    color:#e45050;
+}
+.Link{
+    padding: .2em;
+}
+.User__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100px;
+}
+.User__block span{
+    text-transform: uppercase;
+}
+.LogOut{
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #1890ff;
+}
