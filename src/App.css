@@ -13,7 +13,11 @@
     color:#e45050;
 }
 .Link{
-    padding: .2em;
+    margin: .5em;
+}
+.Btn{
+    margin-right: .5em;
+    margin-top: .5em;
 }
 .User__block{
     display: flex;

@@ -30,9 +30,9 @@ export const Edit = (props) => {
             <h1>Edit a post</h1>
             <Form>
                 <Input placeholder="Post text..." value={post.text} onChange={e => setPost({...post, text: e.target.value})}/>
-                <Button type="primary" htmlType="submit" onClick={fetchEdit}>Post</Button>
-                <Button onClick={fetchDelete}>Delete</Button>
-                <Link to="/">Cancel</Link>
+                <Button className="Btn" type="primary" htmlType="submit" onClick={fetchEdit}>Post</Button>
+                <Button className="Btn" onClick={fetchDelete}>Delete</Button>
+                <Link className="Link" to="/">Cancel</Link>
             </Form>
         </div>
     )
