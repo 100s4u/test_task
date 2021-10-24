@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { PostHeading } from './PostHeading';
 import PostService from '../api/post';
 
 export const Post = () => {
@@ -17,7 +16,6 @@ export const Post = () => {
     }, []);
     return (
         <div>
-            <PostHeading />
             <h1>Post {post.id}</h1>
             <div className="Post__text">
                 <span>{post.text}</span>
