@@ -5,18 +5,18 @@ import { Add } from './components/Add';
 import { Edit } from './components/Edit';
 import { Reg } from './components/Reg';
 import { LogIn } from './components/LogIn';
-import './App.css';
+import './App.css'
 
 function App() {
   return (
     <div className="App">
       <Router>
-          <Route path="/add" component={ Add } />
-          <Route path="/edit/:id" component={ Edit } />
         <Switch>
+          <Route exact path="/add" component={ Add } />
+          <Route exact path="/edit/:id" component={ Edit } />
+          <Route exact path="/login" component={ LogIn } />
+          <Route exact path="/reg" component={ Reg } />
           <Route exact path="/" component={ Home } />
-          <Route path="/login" component={ LogIn } />
-          <Route path="/reg" component={ Reg } />
         </Switch>
       </Router>
     </div>
