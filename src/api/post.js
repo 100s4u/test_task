@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default class PostService{
     static async about(token) {
-        const response = await fetch('http://test.flcd.ru/api/user/self', {
+        const response = await fetch('https://test.flcd.ru/api/user/self', {
             method: 'GET',
             headers: {
                 'accept': '*/*',
@@ -13,15 +13,15 @@ export default class PostService{
         return response.json()
     }
     static async getAll() {
-        const response = await axios.get('http://test.flcd.ru/api/post');
+        const response = await axios.get('https://test.flcd.ru/api/post');
         return response.data.reverse()
     }
     static async getOne(id) {
-        const response = await axios.get('http://test.flcd.ru/api/post/'+id);
+        const response = await axios.get('https://test.flcd.ru/api/post/'+id);
         return response.data
     }
     static async Edit(id, text, token) {
-        await fetch('http://test.flcd.ru/api/post/'+id, {
+        await fetch('https://test.flcd.ru/api/post/'+id, {
             method: 'PATCH',
             headers: {
                 'accept': '*/*',
@@ -35,7 +35,7 @@ export default class PostService{
         });
     }
     static async Add(text, token) {
-        await fetch('http://test.flcd.ru/api/post/', {
+        await fetch('https://test.flcd.ru/api/post/', {
             method: 'POST',
             headers: {
                 'accept': '*/*',
@@ -49,7 +49,7 @@ export default class PostService{
         });
     }
     static async Del(id, token) {
-        await fetch('http://test.flcd.ru/api/post/'+id, {
+        await fetch('https://test.flcd.ru/api/post/'+id, {
             method: 'DELETE',
             headers: {
                 'accept': '*/*',
@@ -59,12 +59,12 @@ export default class PostService{
         });
     }
     static async Login(email, pswd) {
-        const response = await axios.post('http://test.flcd.ru/api/token', {email: email, password: pswd});
+        const response = await axios.post('https://test.flcd.ru/api/token', {email: email, password: pswd});
         return response.data
     }
     static async Reg(name, email, pswd, pswd_cf) {
         try{
-            const response = await axios.post('http://test.flcd.ru/api/register', {name: name, email: email, password: pswd, password_confirmation: pswd_cf})
+            const response = await axios.post('https://test.flcd.ru/api/register', {name: name, email: email, password: pswd, password_confirmation: pswd_cf})
             return response.data
         }catch (error) {
             console.error(error);
