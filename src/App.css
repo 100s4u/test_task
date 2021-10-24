@@ -13,11 +13,28 @@
     color:#e45050;
 }
 .Link{
-    margin: .5em;
+    margin: .5em .5em .5em 0;
+    display: block;
 }
 .Btn{
     margin-right: .5em;
     margin-top: .5em;
+}
+.Posts__text{
+    width: 85%;
+}
+.Posts__btns{
+    display: flex;
+    align-items: center;
+}
+.Post__text{
+    font-size: 16px;
+    font-weight: bold;
+}
+.Post_link{
+    display: block;
+    font-size: 16px;
+    margin-top: 1em;
 }
 .User__block{
     display: flex;

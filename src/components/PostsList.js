@@ -7,7 +7,7 @@ export const PostsList = (props) => {
         if(user_id1 === user_id2){
             return (
                 <div>
-                    <Link to={"/edit/"+ id}>Edit</Link>
+                    <Link className="Link" to={"/edit/"+ id}>Edit</Link>
                 </div>
             )
         }
@@ -18,8 +18,13 @@ export const PostsList = (props) => {
             dataSource={props.posts}
             renderItem={item => (
                 <List.Item>
-                    {item.text}
-                    {isMine(item.id, item.user_id, props.id)}
+                    <div className="Posts__text">
+                        <strong>{item.text}</strong>
+                    </div>
+                    <div className="Posts__btns">
+                        {isMine(item.id, item.user_id, props.id)}
+                        <Link className="Link" to={"/post/"+item.id}>View</Link>
+                    </div>
                 </List.Item>
             )}
         />
