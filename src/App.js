@@ -1,3 +1,6 @@
+/*Да, здесь всё очень плохо*/
+/*Не судите строго, я пытался...*/
+
 import React from 'react';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { Home } from './components/Home';
