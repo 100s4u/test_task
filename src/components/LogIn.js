@@ -24,8 +24,8 @@ export const LogIn = (props) => {
             <Form>
                 <Input placeholder="Email" type="text" value={user.email} onChange={e => setUser({...user, email: e.target.value})}/>
                 <Input placeholder="Password" type="password" value={user.pswd} onChange={e => setUser({...user, pswd: e.target.value})}/>
-                <Button type="primary" htmlType="submit" onClick={login}>Login</Button>
-                <Link to="/">Cancel</Link>
+                <Button className="Btn" type="primary" htmlType="submit" onClick={login}>Login</Button>
+                <Link className="Link" to="/">Cancel</Link>
             </Form>
         </div>
     )
